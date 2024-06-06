@@ -1,0 +1,151 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .room-details-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 90%;
+  }
+  
+  .room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .room-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #343a40;
+  }
+  
+  .close-popup {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #343a40;
+  }
+  
+  .room-images-carousel {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .room-images-carousel img {
+    width: 48%;
+    border-radius: 10px;
+  }
+  
+  .room-info, .room-amenities, .room-pricing, .room-availability, .additional-info, .contact-info, .reviews-ratings {
+    margin-bottom: 20px;
+  }
+  
+  .room-info p, .room-pricing p, .room-availability p, .additional-info p, .contact-info p, .reviews-ratings p {
+    margin: 0;
+    font-size: 16px;
+    color: #495057;
+  }
+  
+  .room-amenities h3, .room-availability h3, .reviews-ratings h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #343a40;
+  }
+  
+  .room-amenities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .room-amenities ul li {
+    background: #e9ecef;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #495057;
+  }
+  
+  .popup-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .popup-actions button {
+    flex: 1;
+    padding: 12px;
+    font-size: 18px;
+  }
+  
+  .reserve-now {
+    background-color: #28a745;
+  }
+  
+  .reserve-now:hover {
+    background-color: #218838;
+  }
+  
+  .add-to-wishlist {
+    background-color: #ffc107;
+  }
+  
+  .add-to-wishlist:hover {
+    background-color: #e0a800;
+  }
+  
+  @media (max-width: 600px) {
+    .room-details-popup {
+      width: 95%;
+    }
+  
+    .room-images-carousel img {
+      width: 100%;
+    }
+  
+    .popup-actions {
+      flex-direction: column;
+    }
+  
+    .popup-actions button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
